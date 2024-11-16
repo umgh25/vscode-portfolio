@@ -1,12 +1,12 @@
-import GitCompareIcon from './icons/GitCompareIcon';
-import ErrorIcon from './icons/ErrorIcon';
-import WarningIcon from './icons/WarningIcon';
-import BellIcon from './icons/BellIcon';
-import CheckIcon from './icons/CheckIcon';
-import VercelIcon from './icons/VercelIcon';
-import styles from '../styles/BottomBar.module.css';
+import GitCompareIcon from '@/icons/GitCompareIcon';
+import ErrorIcon from '@/icons/ErrorIcon';
+import WarningIcon from '@/icons/WarningIcon';
+import BellIcon from '@/icons/BellIcon';
+import CheckIcon from '@/icons/CheckIcon';
+import VercelIcon from '@/icons/VercelIcon';
+import styles from '@/styles/Bottombar.module.css';
 
-const BottomBar = () => {
+const Bottombar = () => {
   return (
     <footer className={styles.bottomBar}>
       <div className={styles.container}>
@@ -16,7 +16,7 @@ const BottomBar = () => {
         </div>
         <div className={styles.section}>
           <ErrorIcon className={styles.icon} />
-          <p className={styles.errorText}>0</p>&nbsp;
+          <p className={styles.errorText}>0</p>&nbsp;&nbsp;
           <WarningIcon className={styles.icon} />
           <p>0</p>
         </div>
@@ -38,4 +38,4 @@ const BottomBar = () => {
   );
 };
 
-export default BottomBar;
+export default Bottombar;

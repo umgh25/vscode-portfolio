@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import ChevronRight from '../components/icons/ChevronRight';
-import styles from '../styles/Explorer.module.css';
+import ChevronRight from '@/components/icons/ChevronRight';
+import styles from '@/styles/Explorer.module.css';
 
 const Explorer = () => {
   const [portfolioOpen, setPortfolioOpen] = useState(true);
