@@ -1,10 +1,10 @@
-import GitCompareIcon from '@/icons/GitCompareIcon';
-import ErrorIcon from '@/icons/ErrorIcon';
-import WarningIcon from '@/icons/WarningIcon';
-import BellIcon from '@/icons/BellIcon';
-import CheckIcon from '@/icons/CheckIcon';
-import VercelIcon from '@/icons/VercelIcon';
-import styles from '@/styles/Bottombar.module.css';
+import GitCompareIcon from './icons/GitCompareIcon';
+import ErrorIcon from './icons/ErrorIcon';
+import WarningIcon from './icons/WarningIcon';
+import BellIcon from './icons/BellIcon';
+import CheckIcon from './icons/CheckIcon';
+import VercelIcon from './icons/VercelIcon';
+import styles from '../styles/Bottombar.module.css';
 
 const Bottombar = () => {
   return (
