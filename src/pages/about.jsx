@@ -1,8 +1,12 @@
+import Head from '../components/Head';
+
 const AboutPage = () => {
   return (
-    <div>
+    <>
+      <Head title="Usman Mughal | About" />
       <h1>About Page</h1>
-    </div>
+    </>
   );
 };
+
 export default AboutPage;

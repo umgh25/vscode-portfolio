@@ -1,8 +1,12 @@
+import Head from '../components/Head';
+
 const ProjectsPage = () => {
   return (
-    <div>
+    <>
+      <Head title="Usman Mughal | Projects" />
       <h1>Projects Page</h1>
-    </div>
+    </>
   );
 };
+
 export default ProjectsPage;

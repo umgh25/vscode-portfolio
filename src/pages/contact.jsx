@@ -1,8 +1,11 @@
+import Head from '../components/Head';
+
 const ContactPage = () => {
   return (
-    <div>
+    <>
+      <Head title="Usman Mughal | Contact" />
       <h1>Contact Page</h1>
-    </div>
+    </>
   );
 };
 
