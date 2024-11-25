@@ -1,11 +1,9 @@
-import Link from 'next/link';
-import Head from '../components/Head';
-import styles from '../styles/HomePage.module.css';
+import Link from "next/link";
+import styles from "../styles/HomePage.module.css";
 
 export default function HomePage() {
   return (
     <>
-      <Head title="Usman Mughal | Accueil" />
       <div className={styles.container}>
         <h6 className={styles.welcome}>Salut les passionnés ! Je suis</h6>
         <h1 className={styles.title}>Usman Mughal</h1>
