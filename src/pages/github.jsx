@@ -6,4 +6,12 @@ const GithubPage = () => {
   );
 };
 
+export async function getStaticProps() {
+  return {
+    props: { title: "Github" },
+  };
+}
+
 export default GithubPage;
+
+

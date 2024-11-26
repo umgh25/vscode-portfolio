@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import Head from "../components/Head";
 import "../styles/globals.css";
-import "../styles/Themes.css";
+import "../styles/themes.css";
 
 function MyApp({ Component, pageProps }) {
-  const [titleText, setTitleText] = useState("Home");
 
   useEffect(() => {
     if (localStorage.getItem("theme")) {
@@ -16,15 +15,9 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
-  useEffect(() => {
-    if (Component) {
-      setTitleText(Component?.name?.replace("Page", ""));
-    }
-  }, [Component]);
-
   return (
     <Layout>
-      <Head title={`Usman Mughal | ${titleText}`} />
+      <Head title={`Usman Mughal | ${pageProps.title}`} />
       <Component {...pageProps} />
     </Layout>
   );
