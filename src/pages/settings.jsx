@@ -46,6 +46,7 @@ const SettingsPage = () => {
   );
 };
 
+
 export async function getStaticProps() {
   return {
     props: { title: "Settings" },
