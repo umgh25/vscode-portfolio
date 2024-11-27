@@ -34,7 +34,7 @@ const GithubPage = ({ repos, user }) => {
       ) : (
         <p>User data could not be loaded.</p> // Message si `user` est null
       )}
-      <h2>6 Latest Updated Repositories</h2>
+      <h2>10 Latest Updated Repositories</h2>
       <div className={styles.container}>
         {repos && repos.length > 0 ? (
           repos.map((repo) => <RepoCard key={repo.id} repo={repo} />)
@@ -67,7 +67,7 @@ export async function getStaticProps() {
     const user = await userRes.json();
 
     const repoRes = await fetch(
-      `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=created_at&per_page=6`
+      `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=created_at&per_page=10`
     );
     console.log(`Repo response status: ${repoRes.status}`); // Ajout pour voir le statut des repos
 

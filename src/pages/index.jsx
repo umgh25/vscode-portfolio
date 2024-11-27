@@ -1,29 +1,31 @@
-import Link from "next/link";
-import styles from "../styles/HomePage.module.css";
+import Link from 'next/link';
+import Illustration from '../components/Illustration';
+import styles from '../styles/HomePage.module.css';
 
-export default function HomePage() {
+export default function PageAccueil() {
   return (
     <>
       <div className={styles.container}>
-        <h6 className={styles.welcome}>Salut les passionnés ! Je suis</h6>
-        <h1 className={styles.title}>Usman Mughal</h1>
-        <h3 className={styles.subtitle}>&lt;!-- Développeur Web --&gt;</h3>
-        <div className={styles.buttons}>
-          <Link href="/about">
-            <button className={styles.contained}>Que puis-je faire ?</button>
-          </Link>
-          <Link href="/contact">
-            <button className={styles.outlined}>Contactez-moi</button>
-          </Link>
+        <div className={styles.background}>
+          <h1>WEB & APP</h1>
+          <h1>DÉVELOPPEUR</h1>
+        </div>
+        <div className={styles.foreground}>
+          <div className={styles.content}>
+            <h1 className={styles.name}>Usman Mughal</h1>
+            <h6 className={styles.bio}>Développeur Web</h6>
+            <button className={styles.button}>Voir mes travaux</button>
+            <button className={styles.outlined}>Me contacter</button>
+          </div>
+          <Illustration className={styles.illustration} />
         </div>
       </div>
     </>
   );
 }
 
-
 export async function getStaticProps() {
   return {
-    props: { title: "Home" },
+    props: { title: 'Accueil' },
   };
 }

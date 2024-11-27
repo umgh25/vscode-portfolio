@@ -1,5 +1,11 @@
 module.exports = {
   images: {
-    domains: ['res.cloudinary.com', 'avatars.githubusercontent.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        pathname: '/**', // Autoriser toutes les sous-routes
+      },
+    ],
   },
 };
