@@ -14,8 +14,12 @@ export default function PageAccueil() {
           <div className={styles.content}>
             <h1 className={styles.name}>Usman Mughal</h1>
             <h6 className={styles.bio}>Développeur Web</h6>
+            <Link href="/projects">
             <button className={styles.button}>Voir mes travaux</button>
+            </Link>
+            <Link href="/contact">
             <button className={styles.outlined}>Me contacter</button>
+            </Link>
           </div>
           <Illustration className={styles.illustration} />
         </div>
