@@ -7,8 +7,8 @@ export default function PageAccueil() {
     <>
       <div className={styles.container}>
         <div className={styles.background}>
-          <h1>WEB & APP</h1>
-          <h1>DÉVELOPPEUR</h1>
+          <h1>Je crée</h1>
+          <h1>des sites web.</h1>
         </div>
         <div className={styles.foreground}>
           <div className={styles.content}>
