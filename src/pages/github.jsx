@@ -80,7 +80,7 @@ export async function getStaticProps() {
 
     return {
       props: { title: 'GitHub', repos, user },
-      revalidate: 60,
+      revalidate: 10,
     };
   } catch (error) {
     console.error('Error in getStaticProps:', error.message);
