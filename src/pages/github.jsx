@@ -4,10 +4,10 @@ import RepoCard from '../components/RepoCard';
 import styles from '../styles/GithubPage.module.css';
 
 const GithubPage = ({ repos, user }) => {
-  // Définir un thème valide pour GitHubCalendar
-  const contributionsTheme = {
-    light: ['#ebedf0', '#c6e48b'], // Minimum requis : 2 couleurs pour le thème clair
-    dark: ['#1e2023', '#239a3b', '#7bc96f', '#c6e48b', '#ebedf0'], // 5 couleurs pour le thème sombre
+  // Thème valide pour GitHubCalendar
+  const theme = {
+    dark: ['#161B22', '#0e4429', '#006d32', '#26a641', '#39d353'], // 5 couleurs pour le thème sombre
+    light: ['#ebedf0', '#c6e48b'], // Minimum requis pour le thème clair
   };
 
   return (
@@ -42,12 +42,16 @@ const GithubPage = ({ repos, user }) => {
           <p>No repositories available.</p> // Message si `repos` est vide
         )}
       </div>
-      <GitHubCalendar
-        username={process.env.NEXT_PUBLIC_GITHUB_USERNAME}
-        theme={contributionsTheme} // Thème valide
-        blockMargin={2}
-        blockSize={20}
-      />
+      <h2>GitHub Contributions</h2>
+      <div className={styles.contributions}>
+        <GitHubCalendar
+          username={process.env.NEXT_PUBLIC_GITHUB_USERNAME}
+          theme={theme} // Thème valide
+          hideColorLegend
+          blockSize={15}
+          blockMargin={2}
+        />
+      </div>
     </>
   );
 };
