@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const CustomHead = ({ title }) => {
+const CustomHead = ({ title = 'Usman Mughal' }) => {
   return (
     <Head>
       <title>{title}</title>
@@ -17,7 +17,3 @@ const CustomHead = ({ title }) => {
 };
 
 export default CustomHead;
-
-CustomHead.defaultProps = {
-  title: 'Usman Mughal',
-};
