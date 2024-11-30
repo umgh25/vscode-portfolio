@@ -3,24 +3,32 @@
     "id": 1,
     "name": "Test1",
     "image": "https://imgur.com/tAZotn3.png",
-    "description": "Site e-commerce complet et prêt pour la production pour une entreprise de fabrication de PCB basée à Bengaluru, en Inde."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    "tags": ["react", "node", "mongodb", "redux", "razorpay", "material-ui"],
+    "demo": "https://www.exemple.com/"
   },
   {
     "id": 2,
     "name": "Test2",
     "image": "https://imgur.com/kbGs6zH.png",
-    "description": "Dribbble, mais pour les développeurs web. Une plateforme permettant aux développeurs et freelances de présenter leurs projets au monde entier."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    "tags": ["react", "node", "mongodb", "redux", "razorpay", "material-ui"],
+    "demo": "https://www.exemple.com/"
   },
   {
     "id": 3,
     "name": "Test3",
     "image": "https://imgur.com/8FFqaX8.png",
-    "description": "Une plateforme de commande de repas sains et faits maison. Profitez du goût authentique grâce à des chefs amateurs talentueux autour de vous."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    "tags": ["react", "node", "mongodb", "redux", "razorpay", "material-ui"],
+    "demo": "https://www.exemple.com/"
   },
   {
     "id": 4,
     "name": "Test4",
     "image": "https://imgur.com/mKkz0iz.png",
-    "description": "Un portfolio personnalisable et centré sur les développeurs, basé sur l'éditeur de texte Visual Studio Code."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    "tags": ["react", "node", "mongodb", "redux", "razorpay", "material-ui"],
+    "demo": "https://www.exemple.com/"
   }
 ]
