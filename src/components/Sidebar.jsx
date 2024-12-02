@@ -9,6 +9,7 @@ import AccountIcon from './icons/AccountIcon';
 import SettingsIcon from './icons/SettingsIcon';
 import styles from '../styles/Sidebar.module.css';
 
+
 const Sidebar = () => {
   const router = useRouter();
 
