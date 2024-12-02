@@ -12,44 +12,35 @@ const GithubPage = ({ repos, user }) => {
 
   return (
     <>
-      {user ? ( // Vérifie si `user` est non null
-        <div className={styles.user}>
-          <div>
-            <Image
-              src={user.avatar_url}
-              className={styles.avatar}
-              alt={user.login}
-              width={50}
-              height={50}
-            />
-            <h3 className={styles.username}>{user.login}</h3>
-          </div>
-          <div>
-            <h3>{user.public_repos} repos</h3>
-          </div>
-          <div>
-            <h3>{user.followers} followers</h3>
-          </div>
+      <div className={styles.user}>
+        <div>
+          <Image
+            src={user.avatar_url}
+            className={styles.avatar}
+            alt={user.login}
+            width={50}
+            height={50}
+          />
+          <h3 className={styles.username}>{user.login}</h3>
         </div>
-      ) : (
-        <p>User data could not be loaded.</p> // Message si `user` est null
-      )}
-      <h2>10 Latest Updated Repositories</h2>
-      <div className={styles.container}>
-        {repos && repos.length > 0 ? (
-          repos.map((repo) => <RepoCard key={repo.id} repo={repo} />)
-        ) : (
-          <p>No repositories available.</p> // Message si `repos` est vide
-        )}
+        <div>
+          <h3>{user.public_repos} repos</h3>
+        </div>
+        <div>
+          <h3>{user.followers} followers</h3>
+        </div>
       </div>
-      <h2>GitHub Contributions</h2>
+      <div className={styles.container}>
+        {repos.map((repo) => (
+          <RepoCard key={repo.id} repo={repo} />
+        ))}
+      </div>
       <div className={styles.contributions}>
         <GitHubCalendar
           username={process.env.NEXT_PUBLIC_GITHUB_USERNAME}
-          theme={theme} // Thème valide
+          theme={theme}
           hideColorLegend
-          blockSize={15}
-          blockMargin={2}
+          hideMonthLabels
         />
       </div>
     </>
