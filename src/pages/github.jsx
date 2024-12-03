@@ -4,10 +4,9 @@ import RepoCard from '../components/RepoCard';
 import styles from '../styles/GithubPage.module.css';
 
 const GithubPage = ({ repos, user }) => {
-  // Thème valide pour GitHubCalendar
   const theme = {
-    dark: ['#161B22', '#0e4429', '#006d32', '#26a641', '#39d353'], // 5 couleurs pour le thème sombre
-    light: ['#ebedf0', '#c6e48b'], // Minimum requis pour le thème clair
+    dark: ['#161B22', '#0e4429', '#006d32', '#26a641', '#39d353'],
+    light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
   };
 
   return (
@@ -49,38 +48,64 @@ const GithubPage = ({ repos, user }) => {
 
 export async function getStaticProps() {
   try {
+    // Récupérer les informations utilisateur
     const userRes = await fetch(
-      `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`
+      `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
+      {
+        headers: {
+          Authorization: `token ${process.env.GITHUB_API_KEY}`,
+        },
+      }
     );
-    console.log(`User response status: ${userRes.status}`); // Ajout pour voir le statut de la réponse
 
     if (!userRes.ok) {
-      const errorText = await userRes.text(); // Lire le message d'erreur
-      throw new Error(`Failed to fetch user: ${userRes.status} - ${errorText}`);
+      console.error(`Erreur lors de la récupération de l'utilisateur : ${userRes.status}`);
+      return {
+        props: { title: 'GitHub', repos: [], user: {} },
+        revalidate: 10,
+      };
     }
-
     const user = await userRes.json();
 
+    // Récupérer les dépôts
     const repoRes = await fetch(
-      `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=created_at&per_page=10`
+      `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?per_page=10`,
+      {
+        headers: {
+          Authorization: `token ${process.env.GITHUB_API_KEY}`,
+        },
+      }
     );
-    console.log(`Repo response status: ${repoRes.status}`); // Ajout pour voir le statut des repos
 
     if (!repoRes.ok) {
-      const errorText = await repoRes.text(); // Lire le message d'erreur
-      throw new Error(`Failed to fetch repositories: ${repoRes.status} - ${errorText}`);
+      console.error(`Erreur lors de la récupération des dépôts : ${repoRes.status}`);
+      return {
+        props: { title: 'GitHub', repos: [], user },
+        revalidate: 10,
+      };
     }
 
-    const repos = await repoRes.json();
+    let repos = await repoRes.json();
+
+    // Vérifier que "repos" est un tableau avant de trier et découper
+    if (Array.isArray(repos)) {
+      repos = repos
+        .sort((a, b) => b.stargazers_count - a.stargazers_count)
+        .slice(0, 10);
+    } else {
+      console.error('La réponse reçue pour "repos" n’est pas un tableau.');
+      repos = [];
+    }
 
     return {
       props: { title: 'GitHub', repos, user },
       revalidate: 10,
     };
   } catch (error) {
-    console.error('Error in getStaticProps:', error.message);
+    console.error('Erreur lors de la récupération des données :', error);
     return {
-      props: { title: 'GitHub', repos: [], user: null },
+      props: { title: 'GitHub', repos: [], user: {} },
+      revalidate: 10,
     };
   }
 }
