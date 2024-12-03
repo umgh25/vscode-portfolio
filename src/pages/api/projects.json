@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Test1",
-    "image": "https://imgur.com/tAZotn3.png",
+    "image": "",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     "tags": ["react", "node", "mongodb", "redux", "razorpay", "material-ui"],
     "source_code":"https://github.com/",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "Test2",
-    "image": "https://imgur.com/kbGs6zH.png",
+    "image": "",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     "tags": ["react", "node", "mongodb", "redux", "razorpay", "material-ui"],
     "demo": "https://www.exemple.com/"
@@ -19,7 +19,7 @@
   {
     "id": 3,
     "name": "Test3",
-    "image": "https://imgur.com/8FFqaX8.png",
+    "image": "",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     "tags": ["react", "node", "mongodb", "redux", "razorpay", "material-ui"],
     "demo": "https://www.exemple.com/"
@@ -27,7 +27,7 @@
   {
     "id": 4,
     "name": "Test4",
-    "image": "https://imgur.com/mKkz0iz.png",
+    "image": "",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     "tags": ["react", "node", "mongodb", "redux", "razorpay", "material-ui"],
     "demo": "https://www.exemple.com/"
