@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import EyeIcon from '../components/icons/EyeIcon';
-import HeartIcon from '../components/icons/HeartIcon';
-import CommentIcon from '../components/icons/CommentIcon';
+import EyeIcon from './icons/EyeIcon';
+import HeartIcon from './icons/HeartIcon';
+import CommentIcon from './icons/CommentIcon';
 import styles from '../styles/ArticleCard.module.css';
 
-const ArticleCard = ({ article }) => {
+const ArticleCard  = ({ article }) => {
   return (
     <a
       href={article.url}
@@ -37,4 +37,4 @@ const ArticleCard = ({ article }) => {
   );
 };
 
-export default ArticleCard;
+export default ArticleCard ;
