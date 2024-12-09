@@ -1,12 +1,20 @@
 [
   {
-    "id": 2,
+    "id": 1,
     "name": "VsCode Portfolio",
     "image": "https://imgur.com/mKkz0iz.png",
     "description": "Un portfolio personnalisable, conçu pour les développeurs, et inspiré de VSCode.",
     "tags": ["next", "css-modules"],
-    "source_code":"https://github.com/umgh25/vscode-portfolio",
+    "source_code": "https://github.com/umgh25/vscode-portfolio",
+    "demo": "/"
+  },
+  {
+    "id": 2,
+    "name": "FDLR Agency",
+    "image": "https://imgur.com/Gt39Wo2.png",
+    "description": "Landing page professionnelle conçue pour promouvoir les services de création de sites web.",
+    "tags": ["react", "tailwind"],
+    "source_code": "https://github.com/umgh25/fdlr-agency",
     "demo": "/"
   }
-  
 ]
