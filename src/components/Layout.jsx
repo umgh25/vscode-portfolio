@@ -1,7 +1,7 @@
 import Titlebar from '../components/Titlebar'
 import Sidebar from '../components/Sidebar'
 import Explorer from '../components/Explorer'
-import Bottombar from '../components/Bottombar'
+import Bottombar from '../components/BottomBar'
 import Tabsbar from './Tabsbar'
 import styles from '../styles/Layout.module.css'
 import { useEffect } from 'react'
