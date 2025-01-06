@@ -16,5 +16,15 @@
     "tags": ["react", "tailwind"],
     "source_code": "https://github.com/bocs91/fdlr-agency",
     "demo": "https://www.fdlragency.com/"
+  },
+
+  {
+    "id": 3,
+    "name": "AI Code Translator",
+    "image": "https://imgur.com/sb30Ik7.png",
+    "description": "Utilisez des outils d'IA pour convertir du code d'un langage de programmation à un autre.",
+    "tags": ["next", "typescript", "tailwind"],
+    "source_code": "https://github.com/umgh25/code-translator",
+    "demo": "https://code-translator-one-iota.vercel.app/"
   }
 ]

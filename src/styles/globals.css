@@ -68,6 +68,7 @@ a:visited {
 .next {
   border: 2px solid rgb(0, 112, 243);
 }
+
 .next:hover {
   background: rgba(0, 112, 243, 0.25);
 }
@@ -92,3 +93,8 @@ a:visited {
 .css-modules:hover {
   background: rgba(21, 114, 182, 0.25);
 }
+
+.typescript {
+  border: 0.1rem solid rgb(70, 167, 25);
+}
+
